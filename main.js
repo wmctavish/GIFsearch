@@ -1,6 +1,6 @@
 
 
-var api = "http://api.giphy.com/v1/gifs/random?";
+var api = "https://api.giphy.com/v1/gifs/random?";
 var apiKey = "&api_key=YlUV7N8iyeNsjHktMsS1ei53OxoTF3dh";
 
 var results = document.getElementById('gif-result');
@@ -11,7 +11,7 @@ var searchButton = document.getElementById('search');
 searchButton.addEventListener('click', () => {
     var searchTerm = document.getElementById('query').value;
     var query = "&tag=" + searchTerm;
-    var url = api + apiKey + "&origin=*" + query;
+    var url = api + apiKey + query;
 
     loadImg(url);
 });
